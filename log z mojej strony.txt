@@ -1,0 +1,49 @@
+Connecting to Domek
+.......
+WiFi connected
+IP address: 
+192.168.0.101
+Connecting to  at port 80
+Connected
+Client connected
+Sending websocket upgrade headers
+Analyzing response headers
+Waiting...
+Got Header: HTTP/1.1 400 Bad Request
+Got Header: Server: nginx
+Got Header: Date: Sat, 19 May 2018 00:45:04 GMT
+Got Header: Content-Type: text/html
+Got Header: Content-Length: 166
+Got Header: Connection: close
+Got Header: X-Host-Ip: 80
+Got Header: 
+Got Header: <html>
+Got Header: <head><title>400 Bad Request</title></head>
+Got Header: <body bgcolor="white">
+Got Header: <center><h1>400 Bad Request</h1></center>
+Got Header: <hr><center>nginx</center>
+Got Header: </body>
+Got Header: </html>
+Invalid handshake
+Terminating socket
+Handshake failed.
+0
+
+Soft WDT reset
+
+ctx: cont 
+sp: 3ffefc60 end: 3ffefe50 offset: 01b0
+
+>>>stack>>>
+3ffefe10:  3ffeeb88 3ffeeba0 3ffeedf4 40202278  
+3ffefe20:  401070a0 6500a8c0 feefeffe feefeffe  
+3ffefe30:  3fffdad0 00000000 3ffeee1a 40204a94  
+3ffefe40:  feefeffe feefeffe 3ffeee30 40100710  
+<<<stack<<<
+
+ ets Jan  8 2013,rst cause:2, boot mode:(1,7)
+
+
+ ets Jan  8 2013,rst cause:4, boot mode:(1,7)
+
+wdt reset

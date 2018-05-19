@@ -1,0 +1,27 @@
+Connecting to Domek
+.......
+WiFi connected
+IP address: 
+192.168.0.101
+Connecting to  at port 80
+Connected
+Client connected
+Sending websocket upgrade headers
+Analyzing response headers
+Waiting...
+Waiting...
+Waiting...
+Got Header: HTTP/1.1 101 Web Socket Protocol Handshake
+Got Header: Connection: Upgrade
+Got Header: Date: Sat, 19 May 2018 00:31:33 GMT
+Got Header: Sec-WebSocket-Accept: ZZbBLHkbPBPuKe44/0d/ThOTErk=
+Got Header: Server: Kaazing Gateway
+Got Header: Upgrade: websocket
+Got Header: 
+Websocket established
+Handshake successful
+czas wysy³ki: 26641
+Sending data: 26641 0123456789012345678901234567780
+Received data: 26641 0123456789012345678901234567780
+czas odbioru: 27644
+czas wysy³ki: 27644

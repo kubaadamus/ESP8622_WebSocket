@@ -1,0 +1,3 @@
+1- Digital ocean, stworzony droplet na ubuntu i wrzucony serwer.js i client.html na serwer. Do tego apt-get update i npm install wszystkie potrzebne biblioteki ¿eby komenda
+"nodejs serwer.js" spowodowa³a bezproblemowe odpalenie serwera - jednym s³owem, stawiamy serwer VPS na ubuntu i odpalamy go za pomoc¹ nodejs.
+2- wgrywamy do arduino program korzystajac z za³¹czonej biblioteki (folder ESP8622-Websocket umieœciæ w folderze library arduino ) i dzia³a :D

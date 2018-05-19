@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "node-uuid": "^1.4.8",
+    "nodejs": "0.0.0",
+    "ws": "^5.1.1",
+    "wss": "^3.0.2"
+  }
+}
