@@ -1,21 +1,46 @@
-var WebSocketServer = require('ws').Server,
- wss = new WebSocketServer({port: 80});
- console.log("Serwer Stoi!");
-wss.on('connection', function(ws) {
- console.log('client connected');
- ws.on('message', function(message) {
- console.log(message);
- });
+var WebSocketServer = require('ws').Server;
+var wss = new WebSocketServer({port: 80});
+var powitanie = "Siemano";
+console.log("Serwer Stoi!");
+var Servo;
+var CLIENTS=[];
+
+
+wss.on('connection', function(ws) 
+{
+ console.log('client connected, wysylam powitanie');
+ ws.send(powitanie);
+ CLIENTS.push(ws);
+ console.log("wyslalem" + powitanie);
+ console.log("Clients:" + CLIENTS)
+ WypiszClientow();
+
+    ws.on('message', function(message) 
+    {
+      console.log(message);
+      if(message == "test")
+      {
+        ws.send("Test ogarnia :D");
+      }
+      Servo = message;
+      console.log("Serwo:" + Servo);
+      console.log("broadcastuję" + Servo);
+      BroadCast();
+    });
 });
 
-wss.onupgrade = function(request, socket) {
-    var key = request.headers['sec-websocket-key'];
-    key = require('crypto').createHash('sha1').update(key+"258EAFA5-E914-47DA-95CA-C5AB0DC85B11").digest('base64');
-    
-    var sResponse = "HTTP/1.1 101 Switching Protocols\r\n" +
-        "Upgrade: websocket\r\n" + "Connection: Upgrade\r\n" +
-        "Sec-WebSocket-Accept: " + key + "\r\n\r\n";
-        socket.write(sResponse,'ascii');
-    
-    //...
+function WypiszClientow(){
+  CLIENTS.forEach(function(e){
+    console.log(e);
+  });
+}
+
+function BroadCast(){
+  CLIENTS.forEach(function(e){
+    if(e.readyState === e.OPEN)
+    {
+      e.send(Servo);
     }
+
+  });
+}

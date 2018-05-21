@@ -15,6 +15,13 @@
  function sendMessage() {
  ws.send($('#message').val());
  }
+ ws.onmessage = function(e) {
+ if(typeof e.data === "string"){
+ console.log("String message received", e, e.data);
+ } else {
+ console.log("Other message received", e, e.data);
+ }
+}
 </script>
 </head>
 <body lang="en">

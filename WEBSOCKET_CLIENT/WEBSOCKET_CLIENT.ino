@@ -55,7 +55,7 @@ void setup() {
     Serial.println("Handshake successful");
   } else {
     Serial.println("Handshake failed.");
-    Serial.println(webSocketClient.handshake(client));
+    //Serial.println(webSocketClient.handshake(client));
     while(1) {
       // Hang on failure
     }  
@@ -71,28 +71,30 @@ void loop() {
     
     webSocketClient.getData(data);
     if (data.length() > 0) {
-      Serial.print("Received data: ");
-      Serial.println(data);
-      Serial.print("czas odbioru: ");Serial.println(millis());
+      //Serial.print("Received data: ");
+      //Serial.println(data);
+      //Serial.print("czas odbioru: ");Serial.println(millis());
+      Print(data);
     }
     
     // capture the value of analog 1, send it alon
     //pinMode(1, INPUT);
     //data = String(analogRead(1));;
     
-    a = String(millis())+ " 0123456789012345678901234567780";
-    Serial.print("czas wysyłki: ");Serial.println(millis());
-    webSocketClient.sendData(a);
+    //a = String(millis())+ " 0123456789012345678901234567780";
+    //Serial.print("czas wysyłki: ");Serial.println(millis());
+    a = "test";
+    //webSocketClient.sendData(a);
     
     
   } else {
-    Serial.println("Client disconnected.");
+    //Serial.println("Client disconnected.");
     while (1) {
       // Hang on disconnect.
     }
   }
   
   // wait to fully let the client disconnect
-  delay(1000);
+  delay(10);
   
 }
