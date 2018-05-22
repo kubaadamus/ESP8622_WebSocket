@@ -1,0 +1,71 @@
+.LiveStream{
+width: 800px;
+height: 600px;
+background-color: red;
+float: left;
+}
+
+.ControlPanel{
+    width: 400px;
+    height: 600px;
+    background-color: blue;
+    float:left;
+}
+
+.SteeringPanel{
+    width:100%;;
+    height:300px;
+    background-color: green;
+    float: left;
+}
+
+.FunctionsPanel{
+    width:100%;;
+    height:300px;
+    background-color: black;
+    float: left;
+}
+
+.LogPanel{
+    width: 400px;
+    height:600px;
+    background-color: purple;
+    float: left;
+}
+.MovementWrapper{
+    width:150px;
+    height: 100px;
+    margin: 0 auto;
+    transform: translateY(100px);
+}
+.HeadWrapper{
+    width:150px;
+    height: 100px;
+    margin: 0 auto;
+
+}
+.Button{
+    width:50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+}
+.Button2{
+    width:80px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    display: block;
+}
+.w{transform:translateX(50px);display: block;}
+.s{float: left;  }
+.a{float: left;}
+.d{float: left;}
+._8{transform:translateX(50px);display: block;}
+._5{float: left;transform: translateY(50px);}
+._4{float: left;}
+._6{float: left;}
+
+.TextArea{
+    margin: 0 auto;
+}
